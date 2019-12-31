@@ -1,0 +1,19 @@
+so..here's the plan
+
+user-chatbot interface frontend
+
+1.the bot asks the user to give the description about the symtomn
+   eg: I'm getting slightly dizzy, i feel sleepy often, im tired always and there is a rise in my body temperature
+something like that..
+
+2. the bot analyses the data and gives a set of options(checkboxes) to pick the symtomns
+      eg:tching
+	skin rash
+	nodal skin eruptions
+	continuous sneezing
+	shivering
+	chills
+	joint pain
+the user must tick the relavant symtoms
+
+3. The bot based on the input gives the disease name and the related cure and stuff
