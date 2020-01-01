@@ -2,7 +2,12 @@ from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.corpus import wordnet
 import pickle
+import webbrowser
 
+
+def search(term):
+   url = "https://www.google.com.tr/search?q={}".format(term)
+   webbrowser.open_new_tab(url)
 
 def rem_punctuation(string):
     punctuations = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
@@ -11,7 +16,7 @@ def rem_punctuation(string):
             string = string.replace(x, "")
     return(string)
 
-#Returns a set containing suitable symtoms from the given word 
+#Returns a set containing suitable symtoms from the given text 
 def lang_process(text):
     #process the input properly
     stop_words = set(stopwords.words('english'))

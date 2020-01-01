@@ -1,5 +1,5 @@
 import pandas as pd
-from process_input import lang_process as lg
+from utils import lang_process as lg,search
 import pickle
 
 def final_verdict(text):
@@ -8,7 +8,7 @@ def final_verdict(text):
    print('Please Enter yes or no for the following:({})'.format(len(raw_txt)))
    a=1
    for i in raw_txt:
-      if input(str(a+'.')+i+'?')=='yes':
+      if input(str(a)+'. '+i+'?')=='yes':
          verdict.append(i)
       a+=1
    verdict=[i.replace(' ','_') for i in verdict]
@@ -27,4 +27,6 @@ def final_verdict(text):
 if __name__=='__main__':
    with open('s.txt','r') as f:
       text=f.read()
-   print(final_verdict(text))
+   result=final_verdict(text)[0]
+   print(result)
+   search(result)
